@@ -1,0 +1,55 @@
+<div class="header">
+    <div class="title">
+        <i class="fa-solid fa-book"></i>
+        <h2>Notes</h2>
+    </div>
+    <div class="sub-list">
+        <div class="list">
+            <div class="box" [ngStyle]="{'background-color' : '#1dd3b0'}"></div>
+            <p>C</p>
+        </div>
+        <div class="list">
+            <div class="box" [ngStyle]="{'background-color' : '#7209b7'}"></div>
+            <p>CPP</p>
+        </div>
+        <div class="list">
+            <div class="box" [ngStyle]="{'background-color' : '#ff5400'}"></div>
+            <p>JAVA</p>
+        </div>
+        <div class="list">
+            <div class="box" [ngStyle]="{'background-color' : '#0496ff'}"></div>
+            <p>ReactJs</p>
+        </div>
+        <div class="list">
+            <div class="box" [ngStyle]="{'background-color' : '#ff0a54'}"></div>
+            <p>Angular</p>
+        </div>
+    </div>
+</div>
+
+<div class="cards-container">
+    <div class="cards" *ngFor="let note of notes" [ngStyle]="{ 'border-color': getBorderColor(note.category) }">
+        <div class="i-card"
+            [ngStyle]="{ 'border-color': getBorderColor(note.category), 'background-color': getgbackgroundColors(note.category) }">
+            <div class="field">
+                <h2>{{note.title}}</h2>
+            </div>
+            <div class="field">
+                <p>{{note.description}}</p>
+            </div>
+            <div class="button-field">
+                <button (click)="editNote(note._id)"><i class="fa-solid fa-file-pen"></i></button>
+                <button (click)="deleteNote(note._id)"><i class="fa-solid fa-eraser"></i></button>
+            </div>
+            <div class="time-field">
+                <p>Created at: {{note.createdAt | date:'short'}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>
+
+<div class="container">
+    <button title="Add Notes" (click)="addNote()"><i class="fa-solid fa-plus"></i></button>
+</div>

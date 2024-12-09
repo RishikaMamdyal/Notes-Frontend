@@ -1,0 +1,71 @@
+form{
+    width: 40%;
+    border: 3px dotted #072ac8;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background: #00a6fb;
+}
+
+form .title{
+    width: 100%;
+    align-items: center;
+}
+form .title h2{
+    font-size: 2em;
+    color: #ffff;
+}
+form .input-field{
+    width: 100%;
+}
+form .input-field input,
+form .input-field textarea,
+form .input-field select{
+    width: 100%;
+    padding: 6px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.268);
+    font-size: 1em;
+}
+form .input-field .error{
+    border-bottom: 2px solid crimson;
+    border-radius: 4px ;
+}
+form .input-field input{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #03045e;
+}
+form .input-field textarea{
+    color: #ffff;
+}
+form .input-field select{
+    color: #0d47a1;
+}
+form button{
+    width: 100%;
+    padding: 6px;
+    margin: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #90e0ef;
+    background: #1b4965;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+form button:disabled{
+    background: #1b49658e;
+    cursor: no-drop;
+}

@@ -1,0 +1,23 @@
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <div class="title">
+        <h2>{{isEdit ? "Edit Notes" : "Add Notes"}}</h2>
+    </div>
+    <div class="input-field">
+        <input type="text" placeholder="Title" formControlName="title" [ngClass]="{'error':noteForm.controls['title'].touched && noteForm.controls['title'].invalid}">
+    </div>
+    <div class="input-field">
+        <textarea placeholder="Description" formControlName="description" [ngClass]="{'error':noteForm.controls['description'].touched && noteForm.controls['description'].invalid}"></textarea>
+    </div>
+    <div class="input-field">
+        <select formControlName="category" [ngClass]="{'error':noteForm.controls['category'].touched && noteForm.controls['category'].invalid}">
+            <option value='' selected>Select Category</option>
+            <option value="C">C</option>
+            <option value="CPP">CPP</option>
+            <option value="Java">Java</option>
+            <option value="ReactJs">ReactJs</option>
+            <option value="Angular">Angular</option>
+        </select>
+    </div>
+    <button type="submit" [disabled]="noteForm.invalid">{{isEdit ? "Edit Note" : "Add Note"}}</button>
+</form>
+<app-loader *ngIf="loading"></app-loader>

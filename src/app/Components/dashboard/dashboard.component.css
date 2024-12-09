@@ -1,0 +1,152 @@
+.header{
+    width: 100%;
+    height: 60px;
+    padding: 0px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 4px #0d47a1;
+}
+.header .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.header .title i{
+    font-size: 1.8em;
+    color: #072ac8;
+}
+.header .title h2{
+    font-size: 2.4em;
+    color: #1e96fc;
+    text-transform: uppercase;
+}
+.header .sub-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.header .sub-list .list{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    gap: 10px;
+}
+.header .sub-list .list .box{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.header .sub-list .list p{
+    font-size: 1em;
+    color: #0d47a1;
+}
+
+.cards-container{
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.cards-container .cards{
+    width: 20%;
+    border: 2px dotted #1e96fc;
+    padding: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.cards-container .cards .i-card{
+    padding: 10px 12px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+    /* border: 2px dotted #0d47a1; */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.cards-container .cards .i-card .field{
+    width: 100%;
+}
+.cards-container .cards .i-card .field h2{
+    height: 40px;
+    font-size: 1.8em;
+    overflow: hidden;
+    color: #ffff;
+}
+.cards-container .cards .i-card .field p{
+    font-size: 1em;
+    text-align: justify;
+    overflow: hidden;
+    height: 220px;
+    color: #ffff;
+}
+.cards-container .cards .i-card .button-field{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cards .i-card .button-field button{
+    padding: 10px;
+    outline:  none;
+    border: none;
+    background: #1e96fc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cards .i-card .button-field button:first-child{
+    background: #2b9348;
+}
+.cards .i-card .button-field button:last-child{
+    background: #d00000;
+}
+.cards .i-card .button-field i{
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    place-content: end;
+}
+.container button{
+    padding: 14px 16px;
+    outline: none;
+    border: 2px solid #1e96fc;
+    border-radius: 50%;
+    background: #1e96fc;
+    cursor: pointer;
+    transition: all ease-in 0.25s;
+}
+.container button i{
+    font-size: 1.8em;
+    color: #fff;
+}
+.container button:hover{
+    transform: rotate(180deg);
+    background: #0d47a1;
+    border: 2px solid #0d47a1;
+}
+
+.i-card .time-field{
+    width: 100%;
+}
+.i-card .time-field p{
+    font-size: 0.9em;
+    text-align: end;
+    color: #fff;
+}
